@@ -1,0 +1,149 @@
+{
+    "content": [
+        {
+            "holderAddress": "0x000000000000000000000000000000000000000000000000000000000000dead",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 70000000.0,
+            "usdAmount": 0.0,
+            "percentage": 7.0,
+            "objectsCount": 2
+        },
+        {
+            "holderAddress": "0x5f494c3f1cd0dad6316fdc5eaf36ce77805ca1fff6b299e1ab54b9162b505d2e",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 54348378.2584466,
+            "usdAmount": 0.0,
+            "percentage": 5.43483782584466,
+            "objectsCount": 1
+        },
+        {
+            "holderAddress": "0xa60d0f2875b86f5f260f0b57bb9b0fa678afbe6d19f6beb30f2bb624b3689ebd",
+            "holderName": "@fumoney",
+            "holderImg": "https://storage.googleapis.com/suins-nft-images/QmaLFg4tQYansFpyRqmDfABdkUVy66dHtpnkH15v1LPzcY.png",
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 35622893.8183439,
+            "usdAmount": 0.0,
+            "percentage": 3.56228938183439,
+            "objectsCount": 15
+        },
+        {
+            "holderAddress": "0x7f40dc674450cc0fd0d4d7da5c23702b46f4d00e384419153208562a749d5775",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 33784070.0,
+            "usdAmount": 0.0,
+            "percentage": 3.378407,
+            "objectsCount": 1
+        },
+        {
+            "holderAddress": "0xfd4c6eafd2cac76dd065b468ca6b481222936901f02f1e0c3783429b06415cb7",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 31846400.0,
+            "usdAmount": 0.0,
+            "percentage": 3.18464,
+            "objectsCount": 1
+        },
+        {
+            "holderAddress": "0x4a782210c326c0d9dff7afab7788df452c19816db0e538bd4861f927f7d53ed7",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 30584438.666915637,
+            "usdAmount": 0.0,
+            "percentage": 3.0584438666915634,
+            "objectsCount": 1
+        },
+        {
+            "holderAddress": "0x57126122f1332a4e422433f3f29b1a6ff7a7c624dd94973fa24bad66947ddf16",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 30000000.0,
+            "usdAmount": 0.0,
+            "percentage": 3.0,
+            "objectsCount": 3
+        },
+        {
+            "holderAddress": "0xc896bc8c576bcb654672cca942d48129925345d4499181c60fce7d502010c3b2",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 29787670.0,
+            "usdAmount": 0.0,
+            "percentage": 2.978767,
+            "objectsCount": 1
+        },
+        {
+            "holderAddress": "0x8b18f6b35398a02e216f1066bc9c70a56584fc9b9ccb2eda4d52e15f0f092e0d",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 29404007.0,
+            "usdAmount": 0.0,
+            "percentage": 2.9404007,
+            "objectsCount": 1
+        },
+        {
+            "holderAddress": "0xc6888d58af6a6cfaaa19c0ce2bb5a13755dcb0934f2a31ca569bbffda1505f57",
+            "holderName": null,
+            "holderImg": null,
+            "coinType": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
+            "coinDenom": "SDRAG",
+            "holderSecurityMessage": null,
+            "amount": 29076448.0,
+            "usdAmount": 0.0,
+            "percentage": 2.9076448,
+            "objectsCount": 1
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "sorted": true,
+            "empty": false,
+            "unsorted": false
+        },
+        "pageNumber": 0,
+        "pageSize": 10,
+        "offset": 0,
+        "paged": true,
+        "unpaged": false
+    },
+    "last": false,
+    "totalElements": 3180,
+    "totalPages": 318,
+    "size": 10,
+    "number": 0,
+    "sort": {
+        "sorted": true,
+        "empty": false,
+        "unsorted": false
+    },
+    "first": true,
+    "numberOfElements": 10,
+    "empty": false
+}
