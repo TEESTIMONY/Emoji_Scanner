@@ -4,235 +4,76 @@
         {
             "chainId": "sui",
             "dexId": "bluemove",
-            "url": "https://dexscreener.com/sui/0xdc4f039105fcf7937f559cf5ecf790eed718873b68e84c0c2978f0fcc9d7ab10",
-            "pairAddress": "0xdc4f039105fcf7937f559cf5ecf790eed718873b68e84c0c2978f0fcc9d7ab10",
+            "url": "https://dexscreener.com/sui/0xe8a0f175f13a9715de2568e6ab6bf2513a29fbb75d78681488a3ab6abdbe4e87",
+            "pairAddress": "0xe8a0f175f13a9715de2568e6ab6bf2513a29fbb75d78681488a3ab6abdbe4e87",
             "baseToken": {
-                "address": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
-                "name": "Sui Dragon",
-                "symbol": "SDRAG"
+                "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
+                "name": "Sewey",
+                "symbol": "SEWEY"
             },
             "quoteToken": {
                 "address": "0x2::sui::SUI",
                 "name": "Sui",
                 "symbol": "SUI"
             },
-            "priceNative": "0.0001027",
-            "priceUsd": "0.0002297",
-            "txns": {
-                "m5": {
-                    "buys": 55,
-                    "sells": 11
-                },
-                "h1": {
-                    "buys": 699,
-                    "sells": 110
-                },
-                "h6": {
-                    "buys": 3352,
-                    "sells": 500
-                },
-                "h24": {
-                    "buys": 4878,
-                    "sells": 1546
-                }
-            },
-            "volume": {
-                "h24": 383847.68,
-                "h6": 153713.81,
-                "h1": 38509.78,
-                "m5": 3765.88
-            },
-            "priceChange": {
-                "m5": -10.84,
-                "h1": 19.05,
-                "h6": -32.89,
-                "h24": 39103
-            },
-            "liquidity": {
-                "usd": 23230.09,
-                "base": 50815276,
-                "quote": 5171.4684
-            },
-            "fdv": 229723,
-            "marketCap": 229723,
-            "pairCreatedAt": 1728838743000,
-            "info": {
-                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/sui/0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::sdrag.png",
-                "websites": [
-                    {
-                        "label": "Website",
-                        "url": "https://sdrag.xyz/"
-                    }
-                ],
-                "socials": [
-                    {
-                        "type": "twitter",
-                        "url": "https://x.com/sdragsui"
-                    },
-                    {
-                        "type": "telegram",
-                        "url": "https://t.me/sdragsui"
-                    }
-                ]
-            },
-            "boosts": {
-                "active": 30
-            }
-        },
-        {
-            "chainId": "sui",
-            "dexId": "cetus",
-            "url": "https://dexscreener.com/sui/0xa1111d646ef14dfc9d7facdb57f05f4199dc9c92ad4560d949c7e8314832bdfe",
-            "pairAddress": "0xa1111d646ef14dfc9d7facdb57f05f4199dc9c92ad4560d949c7e8314832bdfe",
-            "baseToken": {
-                "address": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
-                "name": "Sui Dragon",
-                "symbol": "SDRAG"
-            },
-            "quoteToken": {
-                "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
-                "name": "SUI Token",
-                "symbol": "SUI"
-            },
-            "priceNative": "0.0001023",
-            "priceUsd": "0.0002282",
-            "txns": {
-                "m5": {
-                    "buys": 5,
-                    "sells": 7
-                },
-                "h1": {
-                    "buys": 106,
-                    "sells": 62
-                },
-                "h6": {
-                    "buys": 376,
-                    "sells": 242
-                },
-                "h24": {
-                    "buys": 450,
-                    "sells": 341
-                }
-            },
-            "volume": {
-                "h24": 8158.44,
-                "h6": 6513.4,
-                "h1": 2442.15,
-                "m5": 473.66
-            },
-            "priceChange": {
-                "m5": -12.2,
-                "h1": 14.83,
-                "h6": -36.46,
-                "h24": 360
-            },
-            "liquidity": {
-                "usd": 2909.08,
-                "base": 8377486,
-                "quote": 446.5587
-            },
-            "fdv": 228296,
-            "marketCap": 228296,
-            "pairCreatedAt": 1728848760000,
-            "info": {
-                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/sui/0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::sdrag.png",
-                "websites": [
-                    {
-                        "label": "Website",
-                        "url": "https://sdrag.xyz/"
-                    }
-                ],
-                "socials": [
-                    {
-                        "type": "twitter",
-                        "url": "https://x.com/sdragsui"
-                    },
-                    {
-                        "type": "telegram",
-                        "url": "https://t.me/sdragsui"
-                    }
-                ]
-            },
-            "boosts": {
-                "active": 30
-            }
-        },
-        {
-            "chainId": "sui",
-            "dexId": "cetus",
-            "url": "https://dexscreener.com/sui/0xd61afee46653f23d9c4438238721470628e484186f656b169cb75e27227a6c00",
-            "pairAddress": "0xd61afee46653f23d9c4438238721470628e484186f656b169cb75e27227a6c00",
-            "baseToken": {
-                "address": "0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::SDRAG",
-                "name": "Sui Dragon",
-                "symbol": "SDRAG"
-            },
-            "quoteToken": {
-                "address": "0x0000000000000000000000000000000000000000000000000000000000000002::sui::SUI",
-                "name": "SUI Token",
-                "symbol": "SUI"
-            },
-            "priceNative": "0.00004543",
-            "priceUsd": "0.0001036",
+            "priceNative": "0.000002896",
+            "priceUsd": "0.000006411",
             "txns": {
                 "m5": {
                     "buys": 0,
-                    "sells": 0
-                },
-                "h1": {
-                    "buys": 0,
-                    "sells": 0
-                },
-                "h6": {
-                    "buys": 0,
-                    "sells": 0
-                },
-                "h24": {
-                    "buys": 3,
                     "sells": 2
+                },
+                "h1": {
+                    "buys": 43,
+                    "sells": 47
+                },
+                "h6": {
+                    "buys": 4435,
+                    "sells": 1601
+                },
+                "h24": {
+                    "buys": 9978,
+                    "sells": 2737
                 }
             },
             "volume": {
-                "h24": 3.7,
-                "h6": 0,
-                "h1": 0,
-                "m5": 0
+                "h24": 17219.69,
+                "h6": 714.67,
+                "h1": 30.52,
+                "m5": 21.46
             },
             "priceChange": {
-                "m5": 0,
-                "h1": 0,
-                "h6": 0,
-                "h24": 0.55
+                "m5": 1.42,
+                "h1": -1.29,
+                "h6": -6.2,
+                "h24": 9103
             },
             "liquidity": {
-                "usd": 0,
-                "base": 12.6669,
-                "quote": 0.0009524
+                "usd": 13035.96,
+                "base": 1013071244,
+                "quote": 2954.9817
             },
-            "fdv": 103619,
-            "marketCap": 103619,
-            "pairCreatedAt": 1728869220000,
+            "fdv": 64119,
+            "marketCap": 64119,
+            "pairCreatedAt": 1728919696000,
             "info": {
-                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/sui/0xcd86f675b4bfbf415c094ffb231b52b880edffebf4ba0ad6d5d8119ca224eaff::sdrag::sdrag.png",
+                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/sui/0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::sewey.png",
                 "websites": [
                     {
                         "label": "Website",
-                        "url": "https://sdrag.xyz/"
+                        "url": "https://seweysui.xyz"
                     }
                 ],
                 "socials": [
                     {
                         "type": "twitter",
-                        "url": "https://x.com/sdragsui"
+                        "url": "https://x.com/seweyonsui"
                     },
                     {
                         "type": "telegram",
-                        "url": "https://t.me/sdragsui"
+                        "url": "https://t.me/seweysui"
                     }
                 ]
-            },
-            "boosts": {
-                "active": 30
             }
         }
     ]

@@ -10,114 +10,10 @@ from concurrent.futures import ThreadPoolExecutor
 import traceback
 from mysql.connector import pooling
 import mysql.connector
-
+from PIL import Image
+from io import BytesIO
 SEND_MEDIA =range(1)
 ####  ============ utils ======================== #
-# db_config = {
-#     'user': 'root',
-#     'password': 'Testimonyalade@2003',
-#     'host': 'localhost',
-#     'database': 'scanner_db',
-# }
-
-db_config = {
-    'user':'scanner_user',
-    'password':'Str0ng!Passw0rd',
-    'host':'154.12.231.59',
-    'database':'scanner_db'
-}
-
-connection_pool = pooling.MySQLConnectionPool(pool_name="mypool",
-                                              pool_size=32,  # Adjust based on your needs
-                                              **db_config)
-def create_connection():
-    return connection_pool.get_connection()
-def create_table():
-    conn = create_connection()
-    if conn:  
-        try:
-            cursor = conn.cursor()
-            # Create `media` table
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS media (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    file_id VARCHAR(255) NOT NULL,
-                    file_type VARCHAR(50) NOT NULL,
-                    chat_id BIGINT NOT NULL,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    UNIQUE KEY unique_chat (chat_id)
-
-                )
-            """)
-
-            # Create `emojis` table
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS emojis (
-                    id INT AUTO_INCREMENT PRIMARY KEY,
-                    emoji VARCHAR(50) NOT NULL,
-                    chat_id BIGINT NOT NULL,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                    UNIQUE KEY unique_chat (chat_id)
-                    
-                )
-            """)
-        except Exception as e:
-            print(e)
-        finally:
-            cursor.close()
-            conn.close()
-
-def save_or_update_media_in_db(file_id: str, file_type: str, chat_id: int):
-    conn = mysql.connector.connect(**db_config)
-    cursor = conn.cursor()
-    cursor.execute("""
-        INSERT INTO media (file_id, file_type, chat_id)
-        VALUES (%s, %s, %s)
-        ON DUPLICATE KEY UPDATE
-        file_id = VALUES(file_id),
-        file_type = VALUES(file_type),
-        created_at = CURRENT_TIMESTAMP
-    """, (file_id, file_type, chat_id))
-    conn.commit()
-    cursor.close()
-    conn.close()
-
-
-def save_emoji_to_db(emoji: str, chat_id: int) -> None:
-    try:
-        conn = mysql.connector.connect(**db_config)
-        cursor = conn.cursor()
-        cursor.execute("""
-            INSERT INTO emojis (emoji, chat_id)
-            VALUES (%s, %s)
-            ON DUPLICATE KEY UPDATE
-            emoji = VALUES(emoji),
-            created_at = CURRENT_TIMESTAMP
-        """, (emoji, chat_id))
-        conn.commit()
-        cursor.close()
-        conn.close()
-    except Exception as e:
-        print(e)
-
-
-def download_file(file_url):
-    response = requests.get(file_url)
-    if response.status_code == 200:
-        return response.content
-    else:
-        raise Exception("Failed to download file")
-
-
-def fetch_media_from_db(chat_id: int):
-    conn =create_connection()
-    cursor = conn.cursor()
-    cursor.execute("SELECT file_id, file_type FROM media WHERE chat_id = %s ORDER BY created_at DESC LIMIT 1", (chat_id,))
-    result = cursor.fetchone()
-    cursor.close()
-    conn.close()
-    return result
-
 
 def special_format(number):
     if number == 'N/A':
@@ -224,7 +120,7 @@ def get_holders(token_address:str):
     addresses = []
     count =0
     for items in data['content']:
-        if count <5:
+        if count <3:
             addresses.append(f"https://suivision.xyz/account/{items['holderAddress']}")
             values.append(round(items['percentage'],1))
             count +=1
@@ -305,60 +201,11 @@ async def start(update:Update,context : ContextTypes.DEFAULT_TYPE):
         reply_markup = InlineKeyboardMarkup([row2,row9,row10])
         await context.bot.send_message(user_id,text=message,reply_markup=reply_markup,parse_mode='HTML',disable_web_page_preview=True)
 
-async def set_media(update:Update , context : ContextTypes.DEFAULT_TYPE):
-    user_id = update.message.from_user.id
-    await context.bot.send_message(user_id,text = '🖼️Send an Image or GIF')
-    context.user_data['awaiting_media'] = True
-
-
-async def handle_media(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.message.photo or update.message.animation or update.message.text.startswith("http"):
-        user_data = context.user_data
-        if user_data.get('awaiting_media'):
-            message = update.message
-            chat_id = update.effective_chat.id
-            try:
-                if message.photo:
-                    file_id = message.photo[-1].file_id
-                    save_or_update_media_in_db(file_id, 'photo', chat_id)
-                    await message.reply_text("Photo received and saved.")
-                    context.user_data.clear()
-                    user_data['awaiting_media'] = False
-                elif message.animation:
-                    file_id = message.document.file_id
-                    save_or_update_media_in_db(file_id, 'gif', chat_id)
-                    await message.reply_text("GIF received and saved.")
-                    context.user_data.clear()
-                    user_data['awaiting_media'] = False
-                else:
-                    context.user_data.clear()
-                    user_data['awaiting_media'] = False
-            except Exception as e:
-                print(e)
-                traceback.print_exc()
-                print('An error occured please type /settings to send media')
-
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     chat_id = update.message.chat_id
     message = update.message.text
-    if update.message.text and update.message.text.startswith("http"):
-    
-        if context.user_data['awaiting_media'] ==True:
-            file_url = update.message.text
-            if file_url.endswith(".gif"):
-                try:
-                    gif_file = download_file(file_url)
-                    response = await context.bot.send_document(chat_id=chat_id, document=gif_file)
-                    file_id = response.document.file_id
-                    save_or_update_media_in_db(file_id, 'gif', chat_id)
-                    await update.message.reply_text("GIF received from the link and saved.")
-                except Exception as e:
-                    await update.message.reply_text(f"Failed to process the link: {e}")
-            else:
-                await update.message.reply_text("Please provide a valid GIF link.")
-    else:
-        if message.startswith('0x'):
+    if message.startswith('0x'):
             try:
                 # Offload blocking I/O operations to a separate thread
                 data = await asyncio.get_event_loop().run_in_executor(executor, get_token_pools, message)
@@ -404,6 +251,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         ath = (float(highest_value) * float(fdv)) / float(price_in_usd) if highest_value and fdv and price_in_usd else "N/A"
                     except Exception as e:
                         ath = 'N/A'
+                    try:
+                        image = value['info']['imageUrl']
+                        # use_img = download_file(image)
+                    except Exception as e:
+                        image ='N/A'
+                        print('here',e)
+
                     dex_chart = f"<a href='https://dexscreener.com/sui/{pair_address}'>DEXSCRENEER</a>"
                     blue_dex = f"<a href='https://dex.bluemove.net/swap/0x2::sui::SUI/{pair_address}'>BLUEMOVE</a>"
                     birdeye = f"<a href='https://birdeye.so/token/{message}'>BIRDEYE</a>"
@@ -413,7 +267,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     time_for_ath = calculate_age(int(corresponding_unix_time * 1000)) if corresponding_unix_time else "N/A"
                     print(time_for_ath)
 
-                    
 
                     return {
                         "pair_address": pair_address, "name": name, "symbol": symbol, "price_in_usd": price_in_usd, 
@@ -422,11 +275,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                         "tnx_sell_1hr": tnx_sell_1hr, "vol_in_usd_1hr": vol_in_usd_1hr, "liquidity": liquidity, 
                         "dex_id": dex_id, "ath": ath, "dex_chart": dex_chart, "blue_dex": blue_dex, "birdeye": birdeye, 
                         "hog": hog, "holders": holders, "time_for_ath": time_for_ath, "holders_count": holders_count,
-                        "top_holders": top_holders,'dev_wallet':creators_wallet
+                        "top_holders": top_holders,'dev_wallet':creators_wallet,'image':image
                     }
 
                 values = await get_values()
-                
                 message_content = (
                     f"🟢<b>{values['name']} [{special_format(values['fdv'])}/{values['hr_24']}%]</b> ${values['symbol']}\n"
                     f"💧SUI @ {values['dex_id']}\n"
@@ -439,25 +291,40 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     f"📉 1H: <code><a href ='#'>{special_format(values['hr_1'])}% | ${special_format(values['vol_in_usd_1hr'])} | 🅑 {values['tnx_buy_1hr']} | 🅢 {values['tnx_sell_1hr']}</a></code>\n"
                     f"💬{values['telegram']} | {values['twitter']} | {values['website']}\n\n"
                     f"TOP: {values['holders']}\n\n"
-                    f"HOLDERS: {values['holders_count']} | TOP 10: {round(values['top_holders'], 2)}%\n\n"
-                    f"DEV WALLET: <code>{values['dev_wallet']}</code>\n\n"
+                    f"HOLDERS: {values['holders_count']} | TOP 10: {round(values['top_holders'], 2)}% |<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
+                    # f"<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
                     f"<code>{message}</code>\n\n"
                     f"{values['hog']} | {values['blue_dex']} | {values['birdeye']} | {values['dex_chart']}"
                 )
 
-                media = fetch_media_from_db(chat_id)
-                if media:
-                    file_id, file_type = media
-                    if file_type == 'photo':
-                        await context.bot.send_photo(chat_id=chat_id, photo=file_id,caption=message_content,parse_mode='HTML'),
-                    elif file_type == 'gif':
-                        await context.bot.send_document(chat_id=chat_id, document=file_id,caption = message_content,parse_mode='HTML'),
-                else:
-                    await context.bot.send_message(chat_id, text=message_content, parse_mode='HTML', disable_web_page_preview=True)
+                btn2= InlineKeyboardButton("🤑Buy Emoji Token", callback_data='edit_wallet',url='https://hop.ag/swap/SUI-EMOJI')
+                btn9= InlineKeyboardButton("💬Join Emoji Chat" , callback_data='add_wallet',url='https://t.me/Suiemoji')
+                btn10= InlineKeyboardButton("🖲️Use Emoji Tracker" , callback_data='add_wallet',url='https://t.me/Emojitracker_bot')
+                row2= [btn2]
+                row9= [btn9]
+                row10= [btn10]
+                reply_markup = InlineKeyboardMarkup([row2,row9,row10])
+                # print(values['image'])
+                try:
+                    # Fetch the image from the URL
+                    response = requests.get(values['image'])
+                    img = Image.open(BytesIO(response.content))
 
+                    # Resize the image (increase size as needed)
+                    new_size = (250, 250)  # Adjust this to the desired size
+                    resized_img = img.resize(new_size)
+                    # Save the resized image to a file-like object
+                    img_byte_arr = BytesIO()
+                    resized_img.save(img_byte_arr, format='PNG')
+                    img_byte_arr.seek(0)
+                    # Send the resized image with a caption
+                    await context.bot.send_photo(chat_id=chat_id, photo=img_byte_arr, caption=message_content,parse_mode='HTML',reply_markup=reply_markup)
+                except Exception as e:
+                    print('failed to send image',e)
+                    await context.bot.send_message(chat_id, text=message_content,reply_markup=reply_markup, parse_mode='HTML', disable_web_page_preview=True)
             except Exception as e:
                 print(e)
-                # await context.bot.send_message(chat_id=chat_id, text='An Error Occurred')
+                await context.bot.send_message(chat_id=chat_id, text='An Error Occurred please try again....')
 
 async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
     chat_id = update.message.chat_id
@@ -472,7 +339,6 @@ async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
             except Exception as e:
                 holders_count = ''
                 creators_wallet = ''
-
             # Offload blocking I/O operations to a separate thread
             data = await asyncio.get_event_loop().run_in_executor(executor, get_token_pools, the_args)
             value = data['pairs'][0]
@@ -502,19 +368,23 @@ async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
                 liquidity = value.get('liquidity', {}).get('usd', "N/A")
                 dex_id = value.get('dexId', "N/A")
                 date_to_use = value.get('pairCreatedAt', 0) // 1000
-
                 highest_value, corresponding_unix_time = await asyncio.get_event_loop().run_in_executor(executor, all_time_high, the_args, date_to_use)
                 try:
                     ath = (float(highest_value) * float(fdv)) / float(price_in_usd) if highest_value and fdv and price_in_usd else "N/A"
                 except Exception as e:
                     ath = 'N/A'
+                try:
+                    image = value['info']['imageUrl']
+                    # use_img = download_file(image)
+                except Exception as e:
+                    image ='N/A'
+                    print('here',e)
                 dex_chart = f"<a href='https://dexscreener.com/sui/{pair_address}'>DEXSCRENEER</a>"
                 blue_dex = f"<a href='https://dex.bluemove.net/swap/0x2::sui::SUI/{pair_address}'>BLUEMOVE</a>"
                 birdeye = f"<a href='https://birdeye.so/token/{the_args}'>BIRDEYE</a>"
                 hog = f"<a href='https://hop.ag/swap/SUI-{symbol}'>HOP</a>"
                 holders, top_holders = await asyncio.get_event_loop().run_in_executor(executor, get_holders, the_args)
                 time_for_ath = calculate_age(int(corresponding_unix_time * 1000)) if corresponding_unix_time else "N/A"
-
                 return {
                     "pair_address": pair_address, "name": name, "symbol": symbol, "price_in_usd": price_in_usd, 
                     "fdv": fdv, "website": website, "twitter": twitter, "telegram": telegram, "pair_created": pair_created, 
@@ -522,53 +392,62 @@ async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
                     "tnx_sell_1hr": tnx_sell_1hr, "vol_in_usd_1hr": vol_in_usd_1hr, "liquidity": liquidity, 
                     "dex_id": dex_id, "ath": ath, "dex_chart": dex_chart, "blue_dex": blue_dex, "birdeye": birdeye, 
                     "hog": hog, "holders": holders, "time_for_ath": time_for_ath, "holders_count": holders_count,
-                    "top_holders": top_holders,'dev_wallet':creators_wallet
+                    "top_holders": top_holders,'dev_wallet':creators_wallet,'image':image
                 }
-
             values = await get_values()
             message_content = (
-                f"🟢<b>{values['name']} [{special_format(values['fdv'])}/{values['hr_24']}%]</b> ${values['symbol']}\n"
-                f"💧SUI @ {values['dex_id']}\n"
-                f"💰USD: <code>${special_format(values['price_in_usd'])}</code>\n"
-                f"💎FDV: <code>${special_format(values['fdv'])}</code>\n"
-                f"💦Liq: <code>${special_format(values['liquidity'])}</code>\n"
-                f"📊Vol: <code>${special_format(values['vol_in_usd'])} Age: {values['pair_created']}</code>\n"
-                f"🌋ATH: <code>${special_format(values['ath'])} @ {values['time_for_ath']}</code> \n"
-                f"📉 1H: <code><a href ='#'>{special_format(values['hr_1'])}% | ${special_format(values['vol_in_usd_1hr'])} | 🅑 {values['tnx_buy_1hr']} | 🅢 {values['tnx_sell_1hr']}</a></code>\n"
-                f"💬{values['telegram']} | {values['twitter']} | {values['website']}\n\n"
-                f"TOP: {values['holders']}\n\n"
-                f"HOLDERS: {values['holders_count']} | TOP 10: {round(values['top_holders'], 2)}%\n\n"
-                f"DEV WALLET: <code>{values['dev_wallet']}</code>\n\n"
-                f"<code>{the_args}</code>\n\n"
-                f"{values['hog']} | {values['blue_dex']} | {values['birdeye']} | {values['dex_chart']}"
-            )
-            media = fetch_media_from_db(chat_id)
-            if media:
+                    f"🟢<b>{values['name']} [{special_format(values['fdv'])}/{values['hr_24']}%]</b> ${values['symbol']}\n"
+                    f"💧SUI @ {values['dex_id']}\n"
+                    f"💰USD: <code>${special_format(values['price_in_usd'])}</code>\n"
+                    f"💎FDV: <code>${special_format(values['fdv'])}</code>\n"
+                    f"💦Liq: <code>${special_format(values['liquidity'])}</code>\n"
+                    f"📊Vol: <code>${special_format(values['vol_in_usd'])} Age: {values['pair_created']}</code>\n"
+                    
+                    f"🌋ATH: <code>${special_format(values['ath'])} @ {values['time_for_ath']}</code> \n"
+                    f"📉 1H: <code><a href ='#'>{special_format(values['hr_1'])}% | ${special_format(values['vol_in_usd_1hr'])} | 🅑 {values['tnx_buy_1hr']} | 🅢 {values['tnx_sell_1hr']}</a></code>\n"
+                    f"💬{values['telegram']} | {values['twitter']} | {values['website']}\n\n"
+                    f"TOP: {values['holders']}\n\n"
+                    f"HOLDERS: {values['holders_count']} | TOP 10: {round(values['top_holders'], 2)}% |<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
+                    # f"<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
+                    f"<code>{the_args}</code>\n\n"
+                    f"{values['hog']} | {values['blue_dex']} | {values['birdeye']} | {values['dex_chart']}"
+                )
+            btn2= InlineKeyboardButton("🤑Buy Emoji Token", callback_data='edit_wallet',url='https://hop.ag/swap/SUI-EMOJI')
+            btn9= InlineKeyboardButton("💬Join Emoji Chat" , callback_data='add_wallet',url='https://t.me/Suiemoji')
+            btn10= InlineKeyboardButton("🖲️Use Emoji Tracker" , callback_data='add_wallet',url='https://t.me/Emojitracker_bot')
+            row2= [btn2]
+            row9= [btn9]
+            row10= [btn10]
+            reply_markup = InlineKeyboardMarkup([row2,row9,row10])
+            try:
+                # Fetch the image from the URL
+                response = requests.get(values['image'])
+                img = Image.open(BytesIO(response.content))
 
-                file_id, file_type = media
-                if file_type == 'photo':
-                    await context.bot.send_photo(chat_id=chat_id, photo=file_id,caption=message_content,parse_mode='HTML'),
-                elif file_type == 'gif':
-                    await context.bot.send_document(chat_id=chat_id, document=file_id,caption = message_content,parse_mode='HTML'),
-            else:
-                await context.bot.send_message(chat_id, text=message_content, parse_mode='HTML', disable_web_page_preview=True)
+                # Resize the image (increase size as needed)
+                new_size = (250, 250)  # Adjust this to the desired size
+                resized_img = img.resize(new_size)
+                # Save the resized image to a file-like object
+                img_byte_arr = BytesIO()
+                resized_img.save(img_byte_arr, format='PNG')
+                img_byte_arr.seek(0)
+                # Send the resized image with a caption
+                await context.bot.send_photo(chat_id=chat_id, photo=img_byte_arr, caption=message_content,parse_mode='HTML',reply_markup=reply_markup)
+            except Exception as e:
+                print('failed to send image',e)
+                await context.bot.send_message(chat_id, text=message_content,reply_markup=reply_markup, parse_mode='HTML', disable_web_page_preview=True)
     except Exception as e:
-        traceback.print_exc()
-        print('heree',e)
+        print(e)
+        await context.bot.send_message(chat_id=chat_id, text='An Error Occurred please try again....')
 
 TOKEN_KEY_ = '8137029737:AAHegPYrIqn64szuBQuLsxO6oLs_h0OqGMQ'
 # TOKEN_KEY_ = '7112307264:AAHpaP5uZfU8bYb0pVE7j7WWnVLBQzejLvA'
 def main():
-    create_table()
     app = ApplicationBuilder().token(TOKEN_KEY_).build()
     app.add_handler(ChatMemberHandler(bot_added_to_group, ChatMemberHandler.MY_CHAT_MEMBER))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(CommandHandler("scan", scan))
     app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("setmedia", set_media))
-    app.add_handler(MessageHandler(filters.PHOTO | filters.ANIMATION, handle_media))
-
-
     # app.add_handler()
     app.run_polling()
 
