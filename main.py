@@ -262,7 +262,13 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     blue_dex = f"<a href='https://dex.bluemove.net/swap/0x2::sui::SUI/{pair_address}'>BLUEMOVE</a>"
                     birdeye = f"<a href='https://birdeye.so/token/{message}'>BIRDEYE</a>"
                     hog = f"<a href='https://hop.ag/swap/SUI-{symbol}'>HOP</a>"
-                    holders, top_holders = await asyncio.get_event_loop().run_in_executor(executor, get_holders, message)
+
+                    try:
+                        holders, top_holders = await asyncio.get_event_loop().run_in_executor(executor, get_holders, message)
+                        top_holders = round(top_holders,2)
+                    except Exception as e:
+                        holders ='N/A'
+                        top_holders ='N/A'
                     print(corresponding_unix_time)
                     time_for_ath = calculate_age(int(corresponding_unix_time * 1000)) if corresponding_unix_time else "N/A"
                     print(time_for_ath)
@@ -291,7 +297,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     f"📉 1H: <code><a href ='#'>{special_format(values['hr_1'])}% | ${special_format(values['vol_in_usd_1hr'])} | 🅑 {values['tnx_buy_1hr']} | 🅢 {values['tnx_sell_1hr']}</a></code>\n"
                     f"💬{values['telegram']} | {values['twitter']} | {values['website']}\n\n"
                     f"TOP: {values['holders']}\n\n"
-                    f"HOLDERS: {values['holders_count']} | TOP 10: {round(values['top_holders'], 2)}% |<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
+                    f"HOLDERS: {values['holders_count']} | TOP 10: {values['top_holders']}% |<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
                     # f"<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
                     f"<code>{message}</code>\n\n"
                     f"{values['hog']} | {values['blue_dex']} | {values['birdeye']} | {values['dex_chart']}"
@@ -324,6 +330,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     await context.bot.send_message(chat_id, text=message_content,reply_markup=reply_markup, parse_mode='HTML', disable_web_page_preview=True)
             except Exception as e:
                 print(e)
+                traceback.print_exc()
                 await context.bot.send_message(chat_id=chat_id, text='An Error Occurred please try again....')
 
 async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
@@ -383,7 +390,12 @@ async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
                 blue_dex = f"<a href='https://dex.bluemove.net/swap/0x2::sui::SUI/{pair_address}'>BLUEMOVE</a>"
                 birdeye = f"<a href='https://birdeye.so/token/{the_args}'>BIRDEYE</a>"
                 hog = f"<a href='https://hop.ag/swap/SUI-{symbol}'>HOP</a>"
-                holders, top_holders = await asyncio.get_event_loop().run_in_executor(executor, get_holders, the_args)
+                try:
+                    holders, top_holders = await asyncio.get_event_loop().run_in_executor(executor, get_holders, the_args)
+                    top_holders = round(top_holders,2)
+                except Exception as e:
+                    holders ='N/A'
+                    top_holders ='N/A'
                 time_for_ath = calculate_age(int(corresponding_unix_time * 1000)) if corresponding_unix_time else "N/A"
                 return {
                     "pair_address": pair_address, "name": name, "symbol": symbol, "price_in_usd": price_in_usd, 
@@ -407,7 +419,7 @@ async def scan(update:Update,context = ContextTypes.DEFAULT_TYPE):
                     f"📉 1H: <code><a href ='#'>{special_format(values['hr_1'])}% | ${special_format(values['vol_in_usd_1hr'])} | 🅑 {values['tnx_buy_1hr']} | 🅢 {values['tnx_sell_1hr']}</a></code>\n"
                     f"💬{values['telegram']} | {values['twitter']} | {values['website']}\n\n"
                     f"TOP: {values['holders']}\n\n"
-                    f"HOLDERS: {values['holders_count']} | TOP 10: {round(values['top_holders'], 2)}% |<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
+                    f"HOLDERS: {values['holders_count']} | TOP 10: {values['top_holders']}% |<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
                     # f"<a href='https://suivision.xyz/account/{values['dev_wallet']}'>DEV</a>\n\n"
                     f"<code>{the_args}</code>\n\n"
                     f"{values['hog']} | {values['blue_dex']} | {values['birdeye']} | {values['dex_chart']}"

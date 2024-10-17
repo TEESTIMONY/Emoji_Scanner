@@ -4,74 +4,74 @@
         {
             "chainId": "sui",
             "dexId": "bluemove",
-            "url": "https://dexscreener.com/sui/0xe8a0f175f13a9715de2568e6ab6bf2513a29fbb75d78681488a3ab6abdbe4e87",
-            "pairAddress": "0xe8a0f175f13a9715de2568e6ab6bf2513a29fbb75d78681488a3ab6abdbe4e87",
+            "url": "https://dexscreener.com/sui/0x58c4f486260da48f6ec543cd4ab8c9cb454dc6b5cca92f3595eddf57bfab3a9f",
+            "pairAddress": "0x58c4f486260da48f6ec543cd4ab8c9cb454dc6b5cca92f3595eddf57bfab3a9f",
             "baseToken": {
-                "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-                "name": "Sewey",
-                "symbol": "SEWEY"
+                "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+                "name": "SUI CAPYS",
+                "symbol": "CAPYS"
             },
             "quoteToken": {
                 "address": "0x2::sui::SUI",
                 "name": "Sui",
                 "symbol": "SUI"
             },
-            "priceNative": "0.000002896",
-            "priceUsd": "0.000006411",
+            "priceNative": "0.000001555",
+            "priceUsd": "0.000003177",
             "txns": {
                 "m5": {
                     "buys": 0,
-                    "sells": 2
+                    "sells": 0
                 },
                 "h1": {
-                    "buys": 43,
-                    "sells": 47
+                    "buys": 2,
+                    "sells": 3
                 },
                 "h6": {
-                    "buys": 4435,
-                    "sells": 1601
+                    "buys": 2132,
+                    "sells": 2109
                 },
                 "h24": {
-                    "buys": 9978,
-                    "sells": 2737
+                    "buys": 4765,
+                    "sells": 4174
                 }
             },
             "volume": {
-                "h24": 17219.69,
-                "h6": 714.67,
-                "h1": 30.52,
-                "m5": 21.46
+                "h24": 194744.47,
+                "h6": 15584.94,
+                "h1": 569.45,
+                "m5": 0
             },
             "priceChange": {
-                "m5": 1.42,
-                "h1": -1.29,
-                "h6": -6.2,
-                "h24": 9103
+                "m5": 0,
+                "h1": -2.6,
+                "h6": -39.5,
+                "h24": -90.8
             },
             "liquidity": {
-                "usd": 13035.96,
-                "base": 1013071244,
-                "quote": 2954.9817
+                "usd": 17592.38,
+                "base": 2810595792,
+                "quote": 4241.8613
             },
-            "fdv": 64119,
-            "marketCap": 64119,
-            "pairCreatedAt": 1728919696000,
+            "fdv": 31773,
+            "marketCap": 31773,
+            "pairCreatedAt": 1729014621000,
             "info": {
-                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/sui/0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::sewey.png",
+                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/sui/0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::capys.png",
                 "websites": [
                     {
                         "label": "Website",
-                        "url": "https://seweysui.xyz"
+                        "url": "https://suicapys.org/"
                     }
                 ],
                 "socials": [
                     {
                         "type": "twitter",
-                        "url": "https://x.com/seweyonsui"
+                        "url": "https://x.com/suicapys_coin"
                     },
                     {
                         "type": "telegram",
-                        "url": "https://t.me/seweysui"
+                        "url": "https://t.me/suicapys_coin"
                     }
                 ]
             }

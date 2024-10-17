@@ -1,157 +1,442 @@
 [
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728919800,
-        "value": 8.915980512572907e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729015200,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728921600,
-        "value": 8.953586035341403e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729017000,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728923400,
-        "value": 7.727687420106812e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729018800,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728925200,
-        "value": 5.914837036061502e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729020600,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728927000,
-        "value": 7.043911311940821e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729022400,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728928800,
-        "value": 6.146737428461406e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729024200,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728930600,
-        "value": 6.026227052253323e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729026000,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728932400,
-        "value": 6.283537961699631e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729027800,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728934200,
-        "value": 7.051319802182127e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729029600,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728936000,
-        "value": 7.667508197437047e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729031400,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728937800,
-        "value": 6.519503487180238e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729033200,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728939600,
-        "value": 6.589337919759971e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729035000,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728941400,
-        "value": 6.9669265977696344e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729036800,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728943200,
-        "value": 6.7325497976900485e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729038600,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728945000,
-        "value": 6.721062828423424e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729040400,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728946800,
-        "value": 6.790420455564234e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729042200,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728948600,
-        "value": 7.015655551859276e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729044000,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728950400,
-        "value": 6.8200856078817945e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729045800,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728952200,
-        "value": 6.5843036941687805e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729047600,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728954000,
-        "value": 6.722291854651254e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729049400,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728955800,
-        "value": 6.671789199146946e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729051200,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728957600,
-        "value": 6.9023787704427315e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729053000,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728959400,
-        "value": 7.016804353216174e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729054800,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728961200,
-        "value": 6.716522550641107e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729056600,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728963000,
-        "value": 6.590338592094241e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729058400,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728964800,
-        "value": 6.441756016359731e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729060200,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728966600,
-        "value": 6.441756016359731e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729062000,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728968400,
-        "value": 6.5416083103036885e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729063800,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728970200,
-        "value": 6.3240805597916535e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729065600,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728972000,
-        "value": 6.557989158971968e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729067400,
+        "value": 9.059380154080767e-06
     },
     {
-        "address": "0xbb7fe530172b95f149995931b61010a67056f4eb7cf53369007b91bf01ef92fe::sewey::SEWEY",
-        "unixTime": 1728973800,
-        "value": 6.406977703086612e-06
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729069200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729071000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729072800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729074600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729076400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729078200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729080000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729081800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729083600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729085400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729087200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729089000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729090800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729092600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729094400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729096200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729098000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729099800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729101600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729103400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729105200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729107000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729108800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729110600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729112400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729114200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729116000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729117800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729119600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729121400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729123200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729125000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729126800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729128600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729130400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729132200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729134000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729135800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729137600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729139400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729141200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729143000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729144800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729146600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729148400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729150200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729152000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729153800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729155600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729157400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729159200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729161000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729162800,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729164600,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729166400,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729168200,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729170000,
+        "value": 9.059380154080767e-06
+    },
+    {
+        "address": "0x57184d3106ea793e09506453ef61559fa74f34ea8d1b9db4d3b47c980a053f94::capys::CAPYS",
+        "unixTime": 1729171800,
+        "value": 9.059380154080767e-06
     }
 ]
